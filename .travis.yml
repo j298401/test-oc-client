@@ -1,5 +1,9 @@
+language: java
 sudo: required
 os: linux
+
+jdk:
+- oraclejdk8
 
 services:
   - docker
@@ -7,7 +11,7 @@ services:
 before_install:
 - docker ps -a
 - wget https://github.com/openshift/origin/releases/download/v3.6.0-rc.0/openshift-origin-client-tools-v3.6.0-rc.0-98b3d56-linux-64bit.tar.gz
-- tar -xzvf openshift-origin-client-tools-v3.6.0-rc.0-98b3d56-linux-64bit.zip
+- tar -xzvf openshift-origin-client-tools-v3.6.0-rc.0-98b3d56-linux-64bit.tar.gz
 - ls -alh
 - cd openshift-origin-client-tools-v3.6.0-rc.0-98b3d56-linux-64bit
 
