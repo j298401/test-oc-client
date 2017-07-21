@@ -17,5 +17,5 @@ before_install:
 
 
 script:
-- oc cluster up
-- oc cluster status
+- ./oc cluster up
+- ./oc cluster status
