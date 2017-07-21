@@ -7,8 +7,9 @@ before_install:
 - docker ps -a
 - wget https://github.com/openshift/origin/releases/download/v3.6.0-rc.0/openshift-origin-client-tools-v3.6.0-rc.0-98b3d56-linux-64bit.tar.gz
 - tar xzf openshift-origin-client-tools-v3.6.0-rc.0-98b3d56-linux-64bit.tar.gz
+- cd openshift-origin-client-tools-v3.6.0-rc.0-98b3d56-linux-64bit
+
 
 script:
-- cd openshift-origin-client-tools-v3.6.0-rc.0-98b3d56-linux-64bit
 - oc cluster up
 - oc cluster status
